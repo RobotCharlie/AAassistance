@@ -1,4 +1,4 @@
-package com.example.charlesgao.aaassistance;
+package com.example.charlesgao.activity;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
