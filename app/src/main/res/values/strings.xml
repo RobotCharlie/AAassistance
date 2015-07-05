@@ -7,15 +7,15 @@
     <string name="welcome">" Let's using AAassistance! \n JUST FOR CONVENIENCE!"</string>
 
 
-    <string name="app_grid_view_add_payment">"ADD PAYMENT"</string>
-    <string name="app_grid_view_add_income">"ADD INCOME"</string>
-    <string name="app_grid_view_check_payment">"PAYMENT HISTORY"</string>
-    <string name="app_grid_view_book_management">"BOOK MANAGEMENT"</string>
-    <string name="app_grid_view_my_account">"MY ACCOUNT"</string>
-    <string name="app_grid_view_bill_management">"BILL MANAGEMENT"</string>
-    <string name="app_grid_view_statistic">"STATISTIC"</string>
-    <string name="app_grid_view_category_management">"CATEGORY MANAGEMENT"</string>
-    <string name="app_grid_view_user_management">"USER MANAGEMENT"</string>
+    <string name="app_grid_view_add_payment">"ADD PAYMENT \n"</string>
+    <string name="app_grid_view_add_income">"ADD INCOME \n"</string>
+    <string name="app_grid_view_check_payment">"PAYMENT HISTORY \n"</string>
+    <string name="app_grid_view_book_management">"BOOK MANAGEMENT \n"</string>
+    <string name="app_grid_view_my_account">"MY ACCOUNT \n"</string>
+    <string name="app_grid_view_bill_management">"BILL MANAGEMENT \n"</string>
+    <string name="app_grid_view_statistic">"STATISTIC \n"</string>
+    <string name="app_grid_view_category_management">"CATEGORY MANAGEMENT \n"</string>
+    <string name="app_grid_view_user_management">"USER MANAGEMENT \n"</string>
 
 
 

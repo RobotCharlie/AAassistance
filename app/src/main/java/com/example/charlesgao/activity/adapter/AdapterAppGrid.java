@@ -4,8 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.charlesgao.activity.R;
@@ -75,7 +77,14 @@ public class AdapterAppGrid extends BaseAdapter {
         }else {
             holder = (Holder)convertView.getTag();
         }
+
         holder.imageView.setImageResource(mImageInteger[position]);
+        //Set the params of the imageView
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(150,150);
+        holder.imageView.setLayoutParams(layoutParams);
+        holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+
+
         holder.textView.setText(mImageString[position]);
         return convertView;
     }
