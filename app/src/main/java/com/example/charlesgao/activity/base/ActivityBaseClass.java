@@ -1,6 +1,7 @@
 package com.example.charlesgao.activity.base;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.widget.Toast;
 
 
@@ -18,6 +19,11 @@ public class ActivityBaseClass extends Activity {
         Toast.makeText(this, string, Toast.LENGTH_LONG).show();
     }
 
+    protected void OpenActivity(Class<?> newClass){
+        Intent intent = new Intent();
+        intent.setClass(this, newClass);
+        startActivity(intent);
+    }
 
 
 }
