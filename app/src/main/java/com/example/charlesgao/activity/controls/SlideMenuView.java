@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
@@ -56,7 +57,7 @@ public class SlideMenuView {
 
     private void close() {
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams
-                (RelativeLayout.LayoutParams.MATCH_PARENT, 60);
+                (RelativeLayout.LayoutParams.MATCH_PARENT,120);
         layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
         mLayBottomBox.setLayoutParams(layoutParams);
         mIsClosed = true;
@@ -95,7 +96,7 @@ public class SlideMenuView {
 
         @Override
         public void onClick(View v) {
-
+            toggle();
         }
     }
 

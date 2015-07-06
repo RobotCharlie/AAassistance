@@ -9,8 +9,10 @@
 
     <style name="Style_ListView">
         <item name="android:layout_width">fill_parent</item>
+        <item name="android:entries">@array/SlideMenuActivityMain</item>
+        <item name="android:background">@color/white</item>
         <item name="android:layout_height">fill_parent</item>
-        <item name="android:divider">@drawable/divider</item>
+        <!--<item name="android:divider">@drawable/divider</item>-->
         <item name="android:cacheColorHint">@color/green_light</item>
     </style>
 
