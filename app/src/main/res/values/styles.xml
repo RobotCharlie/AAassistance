@@ -6,4 +6,13 @@
 
     <style name="NoTitlebarTheme" parent="android:Theme.Light.NoTitleBar"/>
 
+
+    <style name="Style_ListView">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:divider">@drawable/divider</item>
+        <item name="android:cacheColorHint">@color/green_light</item>
+    </style>
+
+
 </resources>

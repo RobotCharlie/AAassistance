@@ -1,6 +1,5 @@
-package com.example.charlesgao.activity.base;
+package com.example.charlesgao.activity.Activity.base;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +8,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.example.charlesgao.activity.R;
+import com.example.charlesgao.activity.controls.SlideMenuView;
+import com.example.charlesgao.activity.controls.SliderMenuItem;
 
 /**
  * Created by CharlesGao on 15-07-03.
@@ -18,6 +19,8 @@ import com.example.charlesgao.activity.R;
  *           requestWindowFeature(Window.FEATURE_NO_TITLE);
  */
 public class ActivityFrameClass extends ActivityBaseClass {
+
+    private SlideMenuView mSlideMenuView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,4 +38,15 @@ public class ActivityFrameClass extends ActivityBaseClass {
                 (RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT);
         MainBody.addView(view, layoutParams);
     }
+
+    protected void CreatSlideMenu(int ResID){
+        mSlideMenuView = new SlideMenuView(this);
+        String[] menuItemArray = getResources().getStringArray(ResID);
+        for(int i=0; i < menuItemArray.length; i++){
+            SliderMenuItem sliderMenuItem = new SliderMenuItem(i, menuItemArray[i]);
+            mSlideMenuView.add(sliderMenuItem);
+        }
+        mSlideMenuView.bindList();
+    }
+
 }

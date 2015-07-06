@@ -1,4 +1,4 @@
-package com.example.charlesgao.activity.base;
+package com.example.charlesgao.activity.Activity.base;
 
 import android.app.Activity;
 import android.content.Intent;

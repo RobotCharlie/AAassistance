@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="SlideMenuActivityMain">
+        <item>Software Update</item>
+        <item>Helping</item>
+        <item>Feedback</item>
+        <item>About Software</item>
+    </array>
+</resources>

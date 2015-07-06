@@ -5,7 +5,7 @@
                 tools:context=".MainActivity"
                 android:background="@color/white">
 
-    <include layout="@layout/top_titile" android:id="@+id/id_include_title"/>
+    <include layout="@layout/top_title" android:id="@+id/id_include_title"/>
     <include layout="@layout/bottom_box" android:id="@+id/id_include_bottom_box"/>
     <LinearLayout
         android:layout_width="fill_parent"

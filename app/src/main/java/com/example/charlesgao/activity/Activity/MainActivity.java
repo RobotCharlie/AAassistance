@@ -1,13 +1,11 @@
-package com.example.charlesgao.activity;
+package com.example.charlesgao.activity.Activity;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.Window;
 import android.widget.GridView;
 
+import com.example.charlesgao.activity.R;
 import com.example.charlesgao.activity.adapter.AdapterAppGrid;
-import com.example.charlesgao.activity.base.ActivityFrameClass;
+import com.example.charlesgao.activity.Activity.base.ActivityFrameClass;
 
 
 public class MainActivity extends ActivityFrameClass {
@@ -22,26 +20,27 @@ public class MainActivity extends ActivityFrameClass {
 //        setContentView(R.layout.activity_main);
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        InitVariable();
-        InitListener();
-        InitView();
-        BindData();
+        initVariable();
+        initListener();
+        initView();
+        bindData();
+        CreatSlideMenu(R.array.SlideMenuActivityMain);
 
     }
 
-    public void InitVariable(){
+    public void initVariable(){
         mAdapterAppGrid = new AdapterAppGrid(this);
     }
 
-    public void InitView(){
+    public void initView(){
         mGridview = (GridView)findViewById(R.id.id_main_body_grid_view);
     }
 
-    public void InitListener(){
+    public void initListener(){
 
     }
 
-    public void BindData(){
+    public void bindData(){
         mGridview.setAdapter(mAdapterAppGrid);
     }
 }
