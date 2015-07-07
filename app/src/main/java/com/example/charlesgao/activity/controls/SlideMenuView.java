@@ -1,4 +1,4 @@
-package com.example.charlesgao.activity.controls;
+package com.example.charlesgao.activity.Controls;
 
 import android.app.Activity;
 import android.view.View;
@@ -7,7 +7,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import com.example.charlesgao.activity.R;
-import com.example.charlesgao.activity.adapter.AdapterSlideMenu;
+import com.example.charlesgao.activity.Adapter.AdapterSlideMenu;
 
 import java.util.ArrayList;
 import java.util.List;

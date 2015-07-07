@@ -8,8 +8,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.example.charlesgao.activity.R;
-import com.example.charlesgao.activity.controls.SlideMenuView;
-import com.example.charlesgao.activity.controls.SlideMenuItem;
+import com.example.charlesgao.activity.Controls.SlideMenuView;
+import com.example.charlesgao.activity.Controls.SlideMenuItem;
 
 /**
  * Created by CharlesGao on 15-07-03.

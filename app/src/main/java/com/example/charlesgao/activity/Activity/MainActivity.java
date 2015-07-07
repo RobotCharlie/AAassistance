@@ -6,10 +6,10 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.example.charlesgao.activity.R;
-import com.example.charlesgao.activity.adapter.AdapterAppGrid;
+import com.example.charlesgao.activity.Adapter.AdapterAppGrid;
 import com.example.charlesgao.activity.Activity.base.ActivityFrameClass;
-import com.example.charlesgao.activity.controls.SlideMenuItem;
-import com.example.charlesgao.activity.controls.SlideMenuView;
+import com.example.charlesgao.activity.Controls.SlideMenuItem;
+import com.example.charlesgao.activity.Controls.SlideMenuView;
 
 
 public class MainActivity extends ActivityFrameClass implements SlideMenuView.OnSlideMenuListener{
@@ -52,7 +52,7 @@ public class MainActivity extends ActivityFrameClass implements SlideMenuView.On
     /**This is a "CallBack" method that waiting for the "Event"
      * Here, the MainActivity Class define the following method(define the task or behaviour),
      * this is called CallBack. The "Event" is the method without definition,
-     * which is in {@link com.example.charlesgao.activity.controls.SlideMenuView.OnSlideMenuItemClick}
+     * which is in {@link com.example.charlesgao.activity.Controls.SlideMenuView.OnSlideMenuItemClick}
      * The following "CallBack" method is here waiting to be called.
      * For detailed explanation visit: http://stackoverflow.com/questions/9596276/how-to-explain-callbacks-in-plain-english-how-are-they-different-from-calling-o/9652434#9652434
      */

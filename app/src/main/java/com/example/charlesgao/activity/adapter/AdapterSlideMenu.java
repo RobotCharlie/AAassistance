@@ -1,4 +1,4 @@
-package com.example.charlesgao.activity.adapter;
+package com.example.charlesgao.activity.Adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.charlesgao.activity.R;
-import com.example.charlesgao.activity.adapter.base.AdapterBaseClass;
-import com.example.charlesgao.activity.controls.SlideMenuItem;
+import com.example.charlesgao.activity.Adapter.base.AdapterBaseClass;
+import com.example.charlesgao.activity.Controls.SlideMenuItem;
 
 import java.util.List;
 

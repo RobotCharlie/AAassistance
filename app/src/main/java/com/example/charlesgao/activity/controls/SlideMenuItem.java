@@ -1,4 +1,4 @@
-package com.example.charlesgao.activity.controls;
+package com.example.charlesgao.activity.Controls;
 
 /**
  * Created by CharlesGao on 15-07-05.
