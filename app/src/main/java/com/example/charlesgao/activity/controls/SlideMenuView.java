@@ -1,10 +1,8 @@
 package com.example.charlesgao.activity.controls;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
@@ -24,9 +22,17 @@ public class SlideMenuView {
     private List mMenuList;
     private boolean mIsClosed;
     private RelativeLayout mLayBottomBox;
+    private OnSlideMenuListener onSlideMenuListener;
+
+
+    //This is an Interface that encapsulate the methods of Click Event Listener!
+    public interface OnSlideMenuListener{
+        public abstract void onSlideMenuItemClick(View view, SlideMenuItem slideMenuItem);
+    }
 
     public SlideMenuView(Activity pActivity) {
         mActivity = pActivity;
+        onSlideMenuListener = (OnSlideMenuListener) pActivity;
         initVariable();
         initView();
         initListener();
@@ -73,8 +79,8 @@ public class SlideMenuView {
 
     }
 
-    public void add(SliderMenuItem pSliderMenuItem) {
-        mMenuList.add(pSliderMenuItem);
+    public void add(SlideMenuItem pSlideMenuItem) {
+        mMenuList.add(pSlideMenuItem);
     }
 
     public void bindList() {
@@ -105,7 +111,8 @@ public class SlideMenuView {
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+            SlideMenuItem slideMenuItem = (SlideMenuItem) parent.getItemAtPosition(position);
+            onSlideMenuListener.onSlideMenuItemClick(view, slideMenuItem);
         }
     }
 

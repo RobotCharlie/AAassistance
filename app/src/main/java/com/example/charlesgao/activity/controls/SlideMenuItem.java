@@ -4,13 +4,13 @@ package com.example.charlesgao.activity.controls;
  * Created by CharlesGao on 15-07-05.
  * Function: Encapsulate the items that in SlideMenu
  */
-public class SliderMenuItem {
+public class SlideMenuItem {
 
 
     private int mItemID;
     private String mTitle;
 
-    public SliderMenuItem(int i, String string){
+    public SlideMenuItem(int i, String string){
         mItemID = i;
         mTitle = string;
     }

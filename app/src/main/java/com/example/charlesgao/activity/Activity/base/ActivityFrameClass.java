@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 
 import com.example.charlesgao.activity.R;
 import com.example.charlesgao.activity.controls.SlideMenuView;
-import com.example.charlesgao.activity.controls.SliderMenuItem;
+import com.example.charlesgao.activity.controls.SlideMenuItem;
 
 /**
  * Created by CharlesGao on 15-07-03.
@@ -39,12 +39,12 @@ public class ActivityFrameClass extends ActivityBaseClass {
         MainBody.addView(view, layoutParams);
     }
 
-    protected void CreatSlideMenu(int ResID){
+    protected void CreateSlideMenu(int ResID){
         mSlideMenuView = new SlideMenuView(this);
         String[] menuItemArray = getResources().getStringArray(ResID);
         for(int i=0; i < menuItemArray.length; i++){
-            SliderMenuItem sliderMenuItem = new SliderMenuItem(i, menuItemArray[i]);
-            mSlideMenuView.add(sliderMenuItem);
+            SlideMenuItem slideMenuItem = new SlideMenuItem(i, menuItemArray[i]);
+            mSlideMenuView.add(slideMenuItem);
         }
         mSlideMenuView.bindList();
     }

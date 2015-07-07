@@ -1,16 +1,13 @@
 package com.example.charlesgao.activity.adapter;
 
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.charlesgao.activity.R;
 import com.example.charlesgao.activity.adapter.base.AdapterBaseClass;
-import com.example.charlesgao.activity.controls.SliderMenuItem;
+import com.example.charlesgao.activity.controls.SlideMenuItem;
 
 import java.util.List;
 
@@ -41,8 +38,8 @@ public class AdapterSlideMenu extends AdapterBaseClass {
             holder = (Holder)convertView.getTag();
         }
 
-        SliderMenuItem sliderMenuItem = (SliderMenuItem)getmList().get(position);
-        holder.tvMenuName.setText(sliderMenuItem.getmTitle());
+        SlideMenuItem slideMenuItem = (SlideMenuItem)getmList().get(position);
+        holder.tvMenuName.setText(slideMenuItem.getmTitle());
 
         return convertView;
     }
