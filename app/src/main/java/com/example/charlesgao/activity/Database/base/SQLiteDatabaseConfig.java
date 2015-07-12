@@ -1,7 +1,5 @@
 package com.example.charlesgao.activity.Database.base;
 
-import android.widget.ArrayAdapter;
-
 import java.util.ArrayList;
 
 /**
@@ -27,13 +25,14 @@ public class SQLiteDatabaseConfig {
         return INSTANCE;
     }
 
-    public String getBatabaseName(){
+    public String getDatabaseName(){
         return DATABASE_NAME;
     }
 
     public int getVersion(){
         return VERSION;
     }
+
     public ArrayList<String> getTables(){
         ArrayList<String> arrayList = new ArrayList<>();
         return arrayList;

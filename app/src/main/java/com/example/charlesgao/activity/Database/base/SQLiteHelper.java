@@ -4,8 +4,11 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 /**
  * Created by CharlesGao on 15-07-06.
+ * Function: This class should be Singleton as well.
  */
 public class SQLiteHelper extends SQLiteOpenHelper {
 
@@ -14,12 +17,15 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     private static SQLiteHelper INSTANCE;
 
     public SQLiteHelper(Context context) {
-        super(context, sqLiteDatabaseConfig.getBatabaseName(), null, sqLiteDatabaseConfig.getVersion());
+        super(context, sqLiteDatabaseConfig.getDatabaseName(), null, sqLiteDatabaseConfig.getVersion());
         this.context = context;
     }
 
-    public static SQLiteHelper getInstance(Context context){
-
+    public static SQLiteHelper getInstance(Context context) {
+        if (INSTANCE == null) {
+            INSTANCE = new SQLiteHelper(context);
+        }
+        return INSTANCE;
     }
 
     /**
@@ -30,7 +36,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        ArrayList<String> arrayList = sqLiteDatabaseConfig.getTables();
     }
 
     /**
