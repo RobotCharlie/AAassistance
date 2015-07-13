@@ -16,6 +16,11 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     private Context context;
     private static SQLiteHelper INSTANCE;
 
+    public interface SQLiteDataTable{
+        public void OnCreate(SQLiteDatabase database);
+        public void OnUpgrade(SQLiteDatabase database);
+    }
+
     public SQLiteHelper(Context context) {
         super(context, sqLiteDatabaseConfig.getDatabaseName(), null, sqLiteDatabaseConfig.getVersion());
         this.context = context;

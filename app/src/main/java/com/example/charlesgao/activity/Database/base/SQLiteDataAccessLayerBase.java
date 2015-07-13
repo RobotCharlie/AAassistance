@@ -10,10 +10,13 @@ import java.util.Objects;
 
 /**
  * Created by CharlesGao on 15-07-11.
- * Android offer you a class called SQLiteDatabase, this class encapsulate some API of manipulation
- * of Database. e.g.: getWritableDatabase() and gerReadableDatabase();
+ * Function: Android offer you a class called SQLiteDatabase, this class encapsulate some API of manipulation
+ *           of Database. e.g.: getWritableDatabase() and gerReadableDatabase();
+ *           This Base Class also offer some method that can manipulate the data,
+ *           e.g.: DELETE/RETRIEVE
+ *
  */
-public abstract class SQLiteDataAccessLayerBase {
+public abstract class SQLiteDataAccessLayerBase implements SQLiteHelper.SQLiteDataTable {
 
     private Context context;
     private SQLiteDatabase sqLiteDatabase;
@@ -59,11 +62,18 @@ public abstract class SQLiteDataAccessLayerBase {
         return count;
     }
 
+    //DELETE (in super class)
     protected Boolean delete(String tableName, String condition){
         return getSqLiteDatabase().delete(tableName, " 1=1" + condition, null) >0 ;
     }
 
     protected abstract String[] getTableNameAndPrimaryKey();
+
+    //RETRIEVE (in super class)
+    protected List getList(String sqlText){
+        Cursor cursor = execSql(sqlText);
+        return cursorToList(cursor);
+    }
 
     //Transfer a cursor to a entity
     protected abstract Object findModel(Cursor cursor);

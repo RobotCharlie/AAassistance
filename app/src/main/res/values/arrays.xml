@@ -6,4 +6,8 @@
         <item>Feedback</item>
         <item>About Software</item>
     </array>
+    <array name="InitDefaultUserName">
+        <item>Alice</item>
+        <item>Bob</item>
+    </array>
 </resources>
