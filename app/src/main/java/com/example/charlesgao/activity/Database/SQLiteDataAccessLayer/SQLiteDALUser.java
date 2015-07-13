@@ -5,10 +5,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.charlesgao.activity.Database.Base.SQLiteDALBase;
 import com.example.charlesgao.activity.R;
 import com.example.charlesgao.activity.Utility.DateTools;
 
-import com.example.charlesgao.activity.Database.base.SQLiteDataAccessLayerBase;
 import com.example.charlesgao.activity.Model.ModelUser;
 
 import java.text.ParseException;
@@ -19,16 +19,16 @@ import java.util.List;
  * Created by CharlesGao on 15-07-12.
  * Function: This class is a Abstract Layer(called DataAccessLayer) that can offer you the methods
  *           that manipulate the data by add, remove, modify, retrieve.
- *           This Layer also extends the {@link SQLiteDataAccessLayerBase}, which implements the
- *           Interface {@link com.example.charlesgao.activity.Database.base.SQLiteHelper.SQLiteDataTable}
- *           in {@link com.example.charlesgao.activity.Database.base.SQLiteHelper}
+ *           This Layer also extends the {@link com.example.charlesgao.activity.Database.Base.SQLiteDALBase}, which implements the
+ *           Interface {@link com.example.charlesgao.activity.Database.Base.SQLiteHelper.SQLiteDataTable}
+ *           in {@link com.example.charlesgao.activity.Database.Base.SQLiteHelper}
  *           Two Main Functions:
  *                  1. add, remove, modify, retrieve;
  *                  2. create Table
  */
-public class SQLiteDataAccessLayerUser extends SQLiteDataAccessLayerBase {
+public class SQLiteDALUser extends SQLiteDALBase {
 
-    public SQLiteDataAccessLayerUser(Context context) {
+    public SQLiteDALUser(Context context) {
         super(context);
     }
 //--------------------------------------------------------------------------------------------------

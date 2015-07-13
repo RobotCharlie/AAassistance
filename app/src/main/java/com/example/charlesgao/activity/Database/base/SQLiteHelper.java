@@ -1,4 +1,4 @@
-package com.example.charlesgao.activity.Database.base;
+package com.example.charlesgao.activity.Database.Base;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class SQLiteHelper extends SQLiteOpenHelper {
 
-    private static SQLiteDatabaseConfig sqLiteDatabaseConfig;
+    private static SQLiteDBConfig sqLiteDBConfig;
     private Context context;
     private static SQLiteHelper INSTANCE;
 
@@ -22,7 +22,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     }
 
     public SQLiteHelper(Context context) {
-        super(context, sqLiteDatabaseConfig.getDatabaseName(), null, sqLiteDatabaseConfig.getVersion());
+        super(context, sqLiteDBConfig.getDatabaseName(), null, sqLiteDBConfig.getVersion());
         this.context = context;
     }
 
@@ -41,7 +41,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
-        ArrayList<String> arrayList = sqLiteDatabaseConfig.getTables();
+        ArrayList<String> arrayList = sqLiteDBConfig.getTables();
     }
 
     /**

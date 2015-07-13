@@ -13,7 +13,7 @@
         <item name="android:background">@color/white</item>
         <item name="android:layout_height">fill_parent</item>
         <!--You can choose your own divider here-->
-        <!--<item name="android:divider">@drawable/divider</item>-->
+        <item name="android:divider">@drawable/blue_divider</item>
         <item name="android:cacheColorHint">@color/green_light</item>
     </style>
 

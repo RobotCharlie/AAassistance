@@ -1,4 +1,4 @@
-package com.example.charlesgao.activity.Database.base;
+package com.example.charlesgao.activity.Database.Base;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Created by CharlesGao on 15-07-11.
@@ -16,12 +15,12 @@ import java.util.Objects;
  *           e.g.: DELETE/RETRIEVE
  *
  */
-public abstract class SQLiteDataAccessLayerBase implements SQLiteHelper.SQLiteDataTable {
+public abstract class SQLiteDALBase implements SQLiteHelper.SQLiteDataTable{
 
     private Context context;
     private SQLiteDatabase sqLiteDatabase;
 
-    public SQLiteDataAccessLayerBase (Context context){
+    public SQLiteDALBase (Context context){
         this.context = context;
     }
 
@@ -90,6 +89,5 @@ public abstract class SQLiteDataAccessLayerBase implements SQLiteHelper.SQLiteDa
     public Cursor execSql (String sqlText){
         return getSqLiteDatabase().rawQuery(sqlText, null);
     }
-
 
 }

@@ -1,4 +1,4 @@
-package com.example.charlesgao.activity.Database.base;
+package com.example.charlesgao.activity.Database.Base;
 
 import java.util.ArrayList;
 
@@ -7,20 +7,20 @@ import java.util.ArrayList;
  * Function: Configuration file of Database that using Singleton design pattern to make sure just have one
  *           config file in this app.
  */
-public class SQLiteDatabaseConfig {
+public class SQLiteDBConfig {
 
     private static final int VERSION = 1;
     private static final String DATABASE_NAME = "AADatabase";
-    private static SQLiteDatabaseConfig INSTANCE;
+    private static SQLiteDBConfig INSTANCE;
 
-    private SQLiteDatabaseConfig(){
+    private SQLiteDBConfig(){
 
     }
 
     //Singleton
-    public static SQLiteDatabaseConfig getInstance(){
+    public static SQLiteDBConfig getInstance(){
         if(INSTANCE == null){
-            INSTANCE = new SQLiteDatabaseConfig();
+            INSTANCE = new SQLiteDBConfig();
         }
         return INSTANCE;
     }
