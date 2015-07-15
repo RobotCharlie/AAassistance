@@ -11,6 +11,7 @@ public class ModelUser {
     private int userId;
     private String userName;
     private Date createDate = new Date();
+    // State 0: no effect; 1: take effect
     private int state = 1;
 
     public int getUserId() {

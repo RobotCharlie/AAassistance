@@ -16,10 +16,18 @@ public class BussinessUser extends BussinessBase{
 
     private SQLiteDALUser sqLiteDALUser;
 
-    protected BussinessUser(Context context) {
+    public BussinessUser(Context context) {
         super(context);
         sqLiteDALUser = new SQLiteDALUser(context);
     }
+
+    public List<ModelUser> getNotHideUser(){
+        return sqLiteDALUser.getUser(" AND State = 1");
+    }
+
+
+
+
 
 //--------------------------------------------------------------------------------------------------
 //-------------------------------------------ADD,DELETE,UPDATE,RETRIEVE-----------------------------

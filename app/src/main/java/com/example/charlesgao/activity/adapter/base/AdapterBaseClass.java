@@ -34,6 +34,10 @@ public abstract class AdapterBaseClass extends BaseAdapter {
         return mList;
     }
 
+    public void setmList(List list){
+        mList = list;
+    }
+
     @Override
     public int getCount() {
         return mList.size();
